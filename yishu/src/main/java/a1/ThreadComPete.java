@@ -27,13 +27,13 @@ public class ThreadComPete {
             synchronized (lock){
 
                 System.out.println(Thread.currentThread().getName()+":begin");
-                Map<String,Object> map = new HashMap<>();
+                Map<String,Object> map = new HashMap<String,Object>();
                 for (int j = 0; j <1000 ; j++) {
                     Object o = new Object();
                     map.put(j+"",o);
                 }
                 try {
-                    System.out.println(Thread.currentThread().getName()+":end map is :"+JSONObject.toJSONString(map) );
+//                    System.out.println(Thread.currentThread().getName()+":end map is :"+JSONObject.toJSONString(map) );
                     TimeUnit.SECONDS.sleep(2);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

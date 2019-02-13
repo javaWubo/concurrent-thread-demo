@@ -7,7 +7,7 @@ import java.sql.Connection;
 import java.util.LinkedList;
 
 public class ConnectionPoolImpl implements ConnectionPool {
-    private LinkedList<Connection> pool = new LinkedList<>();
+    private LinkedList<Connection> pool = new LinkedList<Connection>();
 
     public ConnectionPoolImpl(int initSize) {
         if(initSize<0){

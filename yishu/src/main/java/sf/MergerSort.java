@@ -17,6 +17,7 @@ public class MergerSort {
         int []temp = new int[arr.length];//在排序前，先建好一个长度等于原数组长度的临时数组，避免递归中频繁开辟空间
         sort(arr,0,arr.length-1,temp);
     }
+    //TODO WB 改成多线程的排序方式
     private static void sort(int[] arr,int left,int right,int []temp){
         if(left<right){
             int mid = (left+right)/2;
